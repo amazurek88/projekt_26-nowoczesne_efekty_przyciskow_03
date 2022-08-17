@@ -1,0 +1,81 @@
+.container {
+    display: $newDisplay;
+    justify-content: $newJustifyContent;
+    align-items: $newAlignIteme;
+    flex-wrap: wrap;
+    & a {
+        position: $myPosition;
+        display: inline-block;
+        padding: 25px 50px;
+        border: 3px solid $newBackground;
+        margin: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 4px;
+        color: #fff;
+        -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+        transition: 0.5s;
+        transition-delay: 0s;
+        &:hover {
+            transition-delay: 1.5s;
+            color: #000; 
+            box-shadow: 0 0 10px $newBackground,
+                        0 0 20px $newBackground,
+                        0 0 40px $newBackground,
+                        0 0 80px $newBackground,
+                        0 0 160px $newBackground;
+        }
+        & span {
+            position: $myPosition;
+            z-index: 100;
+        }
+        &:nth-child(2){
+            filter: hue-rotate(80deg);
+        }
+        &::before {
+            content: $newContent;
+            position: $newPosition;
+            left: -20px;
+            top: $myTop;
+            transform: $myTransform;
+            width: $myWidth;
+            height: $myHeight;
+            background: $newBackground;
+            box-shadow: 5px -8px 0 $newBackground,
+                        5px 8px 0 $newBackground;
+            transition: $myTransition;
+            transition-delay: $myTransitionDelay;
+        }
+        &:hover::before {
+            width: $newWidth;
+            height: $newHeight;
+            left: -2px;
+            box-shadow: 5px 0 0 $newBackground,
+                        5px 0 0 $newBackground;
+            transition-delay: $newTransitionDelay;
+        }
+        &::after {
+            content: $newContent;
+            position: $newPosition;
+            right: -20px;
+            top: $myTop;
+            transform: $myTransform;
+            width: $myWidth;
+            height: $myHeight;
+            background: $newBackground;
+            box-shadow: -5px -8px 0 $newBackground,
+                        -5px 8px 0 $newBackground;
+            transition: $myTransition;
+            transition-delay: $myTransitionDelay;
+        }
+        &:hover::after {
+            width: $newWidth;
+            height: $newHeight;
+            right: -2px;
+            box-shadow: -5px 0 0 $newBackground,
+                        -5px 0 0 $newBackground;
+            transition-delay: $newTransitionDelay;
+        }
+    }
+}

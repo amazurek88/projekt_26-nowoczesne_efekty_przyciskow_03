@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+
+$myFont: 'Judson', sans-serif;
+$myMargin: 0;
+$myPadding: 0;
+$newDisplay: flex;
+$newJustifyContent: center;
+$newAlignIteme: center;
+$myBackground: #000;
+$newBackground: #0f0;
+$newContent: '';
+$myPosition: relative;
+$newPosition: absolute;
+$myTop: 50%;
+$myTransform: translateY(-50%);
+$myWidth: 20px;
+$myHeight: 2px;
+$myTransition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+$newWidth: 60%;
+$newHeight: 100%;
+$myTransitionDelay: 1s, 0.5s, 0s, 0s;
+$newTransitionDelay: 0s, 0.5s, 1s, 1s;
+
+* {
+    margin: $myMargin;
+    padding: $myPadding;
+    box-sizing: border-box;
+    font-family: $myFont;
+}
+
+body {
+    display: $newDisplay;
+    justify-content: $newJustifyContent;
+    align-items: $newAlignIteme;
+    min-height: 100vh;
+    background: $myBackground;
+}
+
+@import 'imports/container';
